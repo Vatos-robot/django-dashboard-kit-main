@@ -28,77 +28,44 @@
 				</div>
 			</div>
 			<!-- [ breadcrumb ] end -->
-			<!-- [ Main Content ] start -->
 			<div class="row">
-				<!-- [ variant-chart ] start -->
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Basic line chart</h5>
-						</div>
-						<div class="card-body">
-							<div id="line-chart-1"></div>
-						</div>
+			<div class="col-xl-6 col-md-12">
+				<div>
+					<div class="card-header">
+						<h5>Chiffre D'affaire </h5>
 					</div>
+					<img src="data:image/png;base64,{{ ca|safe }}" width="600" height="450">
 				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Area chart</h5>
-						</div>
-						<div class="card-body">
-							<div id="area-chart-1"></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Bar chart</h5>
-						</div>
-						<div class="card-body">
-							<div id="bar-chart-1"></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Bar chart horizontal</h5>
-						</div>
-						<div class="card-body">
-							<div id="bar-chart-3"></div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Pie Charts</h5>
-						</div>
-						<div class="card-body">
-							<div id="pie-chart-1" style="width:100%"></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header">
-							<h5>Pie Charts donut</h5>
-						</div>
-						<div class="card-body">
-							<div id="pie-chart-2" style="width:100%"></div>
-						</div>
-					</div>
-				</div>
-				<!-- [ variant-chart ] end -->
-
 			</div>
-			<!-- [ Main Content ] end -->
-		</div>
-	</div>
-	<!-- [ Main Content ] end -->
+			<div class="col-xl-6 col-md-12">
+				<div class="card-header">
+					<h5>Comparaison du Chiffre d'Affaires Brut et Net avec les Frais de Transport </h5>
+				</div>
+				<div>
+					<img src="data:image/png;base64,{{ value|safe }}" width="600" height="450">
+				</div>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-xl-6 col-md-12">
+				<div class="card-header">
+					<h5>Chiffre D'affaire par an</h5>
+				</div>
+				<div>
+					<img src="data:image/png;base64,{{ total|safe }}" width="600" height="450">
+				</div>
+			</div>
+			<div class="col-xl-6 col-md-12">
+				<div class="card-header">
+					<h5>Cout du Transport par ville </h5>
+				</div>
+				<div>
+					<img src="data:image/png;base64,{{ transport|safe }}" width="600" height="450">
+				</div>
+		
+			</div>
+			</div>
+
 
 {% endblock content %}
 

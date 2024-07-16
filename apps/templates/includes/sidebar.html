@@ -11,26 +11,28 @@
 			<div class="navbar-content">
 				<ul class="pc-navbar">
 					<li class="pc-item pc-caption">
-						<label>Navigation</label>
+						
 					</li>
+				
 					<li class="pc-item">
-						<a href="/" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Dashboard</span></a>
+						<a href="/" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Équipe de direction</span></a>
 					</li>
 				
 					<li class="pc-item pc-caption">
-						<label>table</label>
+					{% if user.team == 'commercial' %}	
 					</li>
+
 					<li class="pc-item">
-						<a href="/tbl_bootstrap.html" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">table_rows</i></span><span class="pc-mtext">Bootstrap table</span></a>
+						<a href="{% url 'commercial' %}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">table_rows</i></span><span class="pc-mtext">Équipe commerciale</span></a>
 					</li>
+					{% endif %}
 					<li class="pc-item pc-caption">
-						<label>Chart</label>
-						<span>Tones of readymade charts</span>
+					
 					</li>
 					<li class="pc-item">
-						<a href="/chart-apex.html" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">bubble_chart</i></span><span class="pc-mtext">Chart</span></a>
+						<a href="{% url 'comptable' %}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">bubble_chart</i></span><span class="pc-mtext">Équipe comptable</span></a>
 					</li>
-				
+					
 				
 			
 				</ul>
