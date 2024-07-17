@@ -10,7 +10,13 @@ from django.shortcuts import render
 from apps.load_data import load_data
 from apps.home.utils import top_sellers, transport_costs_by_location, total_price_per_year,get_delivered_orders_by_month, top_cat, get_reviews_delivery, get_orders_by_town, get_mensuel_CA, bottom_cat, get_best_and_worst_category_review, get_ne_value_without_freight
 
-
+@login_required(login_url="/login/")
+def home(request):
+    
+    print("tamere")
+    context = {'segment': 'home'}
+    
+    return render(request, 'home/home.html', context)
 
 @login_required(login_url="/login/")
 def index(request):
@@ -57,8 +63,8 @@ def index(request):
     seller =top_sellers(df_order_item)
     ca= get_mensuel_CA(df_order,df_payment)
     context = {'segment': 'index', 'total_vente': somme, 'total_client': nombre_clients_uniques,'seller': seller, 'total_seller': nombre_seller_uniques, 'order_delivered': nombre_total_commandes_livrees, 'chart_img': chart_img, 'top_cat': top_cate, 'top_cat_price':top_cate_price, 'ca':ca}
-    html_template = loader.get_template('home/index.html')
-    return HttpResponse(html_template.render(context, request))
+    return render(request, 'home/index.html', context)
+    
 
 def commercial_view(request):
     data = load_data()

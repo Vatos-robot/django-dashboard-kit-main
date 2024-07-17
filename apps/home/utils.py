@@ -316,6 +316,8 @@ def bottom_cat(order_df, product_df):
         'total_revenue': revenue_by_category.values
     }).head(10)  # 10 catégories les moins rentables
 
+    bottom_categories_revenue_df['total_revenue'] = bottom_categories_revenue_df['total_revenue'].round(2) 
+
     return bottom_categories_revenue_df, bottom_categories_df
 
 def get_best_and_worst_category_review(orders_df, reviews_df, products_df, order_items_df):

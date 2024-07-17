@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} DASH {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="pc-container">
+    <div class="pcoded-content">
+        <div class="card-body">
+
+            <div>
+                <h1> DASHBOARD </h1>
+            </div>
+        </div> 
+    </div>
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="/static/assets/js/plugins/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/assets/js/pages/dashboard-sale.js"></script>
+
+{% endblock javascripts %}

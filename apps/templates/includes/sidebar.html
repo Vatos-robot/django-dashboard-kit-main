@@ -11,15 +11,15 @@
 			<div class="navbar-content">
 				<ul class="pc-navbar">
 					<li class="pc-item pc-caption">
-						
+					{% if user.team == 'direction' %}
 					</li>
 				
 					<li class="pc-item">
-						<a href="/" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Équipe de direction</span></a>
+						<a href={% url 'direction' %} class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">home</i></span><span class="pc-mtext">Équipe de direction</span></a>
 					</li>
-				
+					{% endif %}
 					<li class="pc-item pc-caption">
-					{% if user.team == 'commercial' %}	
+					{% if user.team == 'commercial' or user.team == 'direction' %}	
 					</li>
 
 					<li class="pc-item">
@@ -27,12 +27,12 @@
 					</li>
 					{% endif %}
 					<li class="pc-item pc-caption">
-					
+					{% if user.team == 'comptable'  or user.team == 'direction' %}
 					</li>
 					<li class="pc-item">
 						<a href="{% url 'comptable' %}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">bubble_chart</i></span><span class="pc-mtext">Équipe comptable</span></a>
 					</li>
-					
+					{% endif %}
 				
 			
 				</ul>
